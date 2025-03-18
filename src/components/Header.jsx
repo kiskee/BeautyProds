@@ -1,21 +1,57 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { t, i18n } = useTranslation();
-
+  const text = t("header.title");
+  const [key, setKey] = useState(0);
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
   };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setKey((prevKey) => prevKey + 1);
+    }, 10000);
+
+    return () => clearInterval(interval);
+  }, []);
   return (
     <>
       <header className="bg-gradient-to-r from-pink-500 to-pink-400 shadow-md">
         <div className="container mx-auto px-4 py-3">
           <div className="flex items-center justify-between">
-            <h1 className="text-6xl sm:text-6xl font-bold text-white">
+            {/* <h1 className="text-6xl sm:text-6xl font-bold text-white">
               {t("header.title")}
-            </h1>
+            </h1> */}
+            <motion.h1
+              key={key} // Reinicia la animación cambiando la clave
+              className="text-6xl sm:text-6xl font-bold text-white"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+            >
+              {text.split("").map((char, index) => (
+                <motion.span
+                  key={index}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: index * 0.1 }}
+                >
+                  {char}
+                </motion.span>
+              ))}
+              <motion.span
+                className="ml-1 text-4xl"
+                initial={{ opacity: 0 }} // Inicia invisible
+                animate={{ opacity: [0, 1, 0] }} // Luego empieza a titilar
+                transition={{ delay: 1, repeat: Infinity, duration: 0.8 }} // Espera 3s antes de titilar
+              >
+                .
+              </motion.span>
+            </motion.h1>
 
             <div className="flex items-center">
               {/* Selector de idioma */}
