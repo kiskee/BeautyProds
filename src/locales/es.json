@@ -1,0 +1,66 @@
+{
+  "header": {
+    "title": "Zero-Celu",
+    "nav": {
+      "home": "Inicio",
+      "services": "Servicios",
+      "products": "Productos",
+      "contact": "Contacto"
+    }
+  },
+  "main": {
+    "banner": {
+      "title": "Descubre tu Belleza Natural",
+      "description": "Ofrecemos los mejores tratamientos y productos para realzar tu belleza natural.",
+      "button": "Reservar Cita",
+      "imageAlt": "Imagen"
+    },
+    "services": {
+      "title": "Nuestros Servicios",
+      "imageAlt": "Imagen del servicio",
+      "facialTreatment": {
+        "title": "Tratamiento Facial",
+        "description": "Revitaliza tu piel con nuestro tratamiento facial personalizado."
+      },
+      "manicurePedicure": {
+        "title": "Manicure & Pedicure",
+        "description": "Cuida tus manos y pies con nuestros servicios premium."
+      },
+      "professionalMakeup": {
+        "title": "Maquillaje Profesional",
+        "description": "Luce espectacular para cualquier ocasión con nuestros expertos."
+      },
+      "eyelashExtensions": {
+        "title": "Extensiones de Pestañas",
+        "description": "Realza tu mirada con nuestras extensiones de pestañas."
+      },
+      "relaxingMassage": {
+        "title": "Masaje Relajante",
+        "description": "Elimina el estrés con nuestros masajes terapéuticos."
+      },
+      "hairTreatment": {
+        "title": "Tratamiento Capilar",
+        "description": "Recupera la salud y brillo de tu cabello."
+      },
+      "button": "Reservar"
+    },
+    "cta": {
+      "title": "¿Lista para transformar tu imagen?",
+      "description": "Únete a nuestra comunidad y recibe ofertas exclusivas, consejos de belleza y más.",
+      "placeholder": "Tu correo electrónico",
+      "button": "Suscribirse"
+    }
+  },
+  "footer": {
+    "tagline": "Tu destino para la belleza y cuidado personal",
+    "links": "Enlaces",
+    "contact": "Contacto",
+    "contactItems": {
+      "email": "Email",
+      "phone": "Teléfono",
+      "location": "Ubicación"
+    },
+    "followUs": "Síguenos",
+    "copyright": "© 2025 BeautyApp. Todos los derechos reservados."
+  }
+}
