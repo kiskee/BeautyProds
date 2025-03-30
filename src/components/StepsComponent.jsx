@@ -114,73 +114,6 @@ const StepsComponent = () => {
     },
   ];
 
-  // Función para renderizar flechas según la posición
-  const renderArrow = (index) => {
-    // Para los elementos en la primera fila (índices 0 y 1)
-    if (index < 2) {
-      return (
-        <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 text-pink-600 animate-bounce"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M19 14l-7 7m0 0l-7-7m7 7V3"
-            />
-          </svg>
-        </div>
-      );
-    }
-    // Para los elementos en la segunda fila (índices 2 y 3)
-    else if (index < 4) {
-      if (index === 2) {
-        return (
-          <div className="absolute -right-6 top-1/2 transform translate-y-1/2 rotate-90">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6 text-pink-600 animate-bounce"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </div>
-        );
-      }
-      return (
-        <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 text-pink-600 animate-bounce"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M19 14l-7 7m0 0l-7-7m7 7V3"
-            />
-          </svg>
-        </div>
-      );
-    }
-    return null;
-  };
-
   return (
     <div className="w-full max-w-4xl mx-auto p-6 bg-gradient-to-b from-pink-100 to-pink-200 rounded-xl shadow-lg">
       <h2 className="text-3xl font-bold text-center mb-12 text-pink-600 animate-pulse">
@@ -208,8 +141,6 @@ const StepsComponent = () => {
               </div>
               <p className="text-gray-800">{step.description}</p>
             </div>
-
-            {renderArrow(index)}
           </div>
         ))}
       </div>
