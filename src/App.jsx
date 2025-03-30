@@ -1,47 +1,28 @@
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Main from "./components/Main";
-import StepsComponent from "./components/StepsComponent";
-import Banner from "./components/Banner";
-import BannerInput from "./components/BannerInput";
-import NewComponen from "./components/NewComponen";
-import Header2 from "./components/Header2";
-import One from "./components/one";
-import Two from "./components/two";
-import Three from "./components/three";
-import Four from "./components/four";
-import Five from "./components/five";
-import Six from "./components/six";
-import Seven from "./components/seven";
-import Eith from "./components/eith";
+
+import Header from "./components/Header1.0";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Benefits from "./components/Benefits";
+import Content from "./components/Content";
+import Testimonials from "./components/Testimonials";
+import Final from "./components/Final";
+import Footer from "./components/Footer1.0";
 
 function App() {
   return (
     <>
       <div className="font-sans min-h-screen bg-gradient-to-b from-pink-50 to-white">
-        <One   />
-        <Two  id="hero"  />
-        <Three id="about" />
-        <Four id="benefits"/>
-        <Five id="content" />
-        <Six id="testimonials"/>
-        <Seven id="final" />
-        <Eith />
+        <Header   />
+        <Hero  id="hero"  />
+        <About id="about" />
+        <Benefits id="benefits"/>
+        <Content id="content" />
+        <Testimonials id="testimonials"/>
+        <Final id="final" />
+        <Footer />
       </div>
     </>
   );
 }
 
 export default App;
-/**
-  * 
-  *   {/*
-      <Header />
-      <Banner/>
-      <StepsComponent/>
-      <Main />
-      
-      <BannerInput/> 
-       <Footer />
-      
-  */

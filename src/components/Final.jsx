@@ -1,4 +1,4 @@
-export default function Seven({id}) {
+export default function Final({id}) {
   return (
     <>
       {/* Final CTA Section */}

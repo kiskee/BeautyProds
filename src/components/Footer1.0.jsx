@@ -1,4 +1,4 @@
-export default function Eith() {
+export default function Footer() {
   return (
     <>
       {/* Footer */}

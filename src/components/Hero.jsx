@@ -1,6 +1,6 @@
 import butsIMG from "../assets/buts1.png";
 
-export default function Two({ id }) {
+export default function Hero({ id }) {
   return (
     <>
       {/* Hero Section */}

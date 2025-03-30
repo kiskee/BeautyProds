@@ -1,6 +1,6 @@
 import portadaIMG from "../assets/portada.jpeg"
 
-export default function Five({id}) {
+export default function Content({id}) {
   return (
     <>
       {/* Content Preview Section */}

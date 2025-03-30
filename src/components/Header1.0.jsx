@@ -17,7 +17,7 @@ const scrollToSection = (id) => {
   gsap.to(window, { duration: 1.5, scrollTo: `#${id}`, ease: "power2.out" });
 };
 
-export default function One() {
+export default function Header() {
   const headerRef = useRef(null);
   const [key, setKey] = useState(0);
   const text = "Zero-Celu";

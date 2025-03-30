@@ -2,7 +2,7 @@ import person1 from "../assets/person1.jpg";
 import person2 from "../assets/person2.png";
 import person3 from "../assets/person3.png";
 
-export default function Six({id}) {
+export default function Testimonials({id}) {
   return (
     <>
       {/* Testimonials Section */}

@@ -1,4 +1,4 @@
-export default function Four({id}) {
+export default function Benefits({id}) {
   return (
     <>
       {/* Benefits Section */}

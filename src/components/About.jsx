@@ -1,7 +1,7 @@
 import celuIMG from "../assets/celu8.jpeg"
 
 
-export default function Three({id}) {
+export default function About({id}) {
   return (
     <>
       {/* About Section */}
