@@ -183,7 +183,8 @@ export default function Hero({ id }) {
             onMouseEnter={onButtonHover}
             onMouseLeave={onButtonLeave}
           >
-            ¡COMPRA TU GUÍA AHORA!
+            <a href="https://pay.hotmart.com/W99056782N?bid=1743999619668">¡COMPRA TU GUÍA AHORA!</a>
+            
             <div className="absolute inset-0 rounded-full bg-white opacity-30 transform scale-0" />
           </button>
           <div className="mt-12 flex justify-center">

@@ -8,17 +8,13 @@ export default function Final({id}) {
             ¡Comienza tu transformación hoy!
           </h2>
           <p className="text-xl text-gray-900 mb-8 max-w-3xl mx-auto">
-            Descarga nuestro PDF gratuito y únete a miles de personas que ya han
+            Compra nuestro PDF y únete a miles de personas que ya han
             transformado su piel y aumentado su confianza.
           </p>
           <div className="flex flex-col md:flex-row justify-center items-center gap-4">
-            <input
-              type="email"
-              placeholder="Tu email aquí..."
-              className="px-6 py-3 rounded-full w-full md:w-64 focus:outline-none focus:ring-2 focus:ring-pink-500"
-            />
+           
             <button className="px-8 py-3 bg-pink-600 text-white text-lg rounded-full hover:bg-pink-700 transition shadow-lg w-full md:w-auto">
-              ENVIARME EL PDF
+            <a href="https://pay.hotmart.com/W99056782N?bid=1743999619668">¡COMPRA TU GUÍA AHORA!</a>
             </button>
           </div>
           <p className="text-sm text-gray-900 mt-4">

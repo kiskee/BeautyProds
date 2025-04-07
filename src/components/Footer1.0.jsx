@@ -6,7 +6,7 @@ export default function Footer() {
         <div className="container mx-auto">
           <div className="grid md:grid-cols-3 gap-8">
             <div>
-              <h3 className="text-xl font-semibold mb-4">BeautySkin</h3>
+              <h3 className="text-xl font-semibold mb-4">Zero-Celulitis</h3>
               <p className="text-white">
                 Ayudamos a miles de personas a mejorar su piel y aumentar su
                 confianza a través de programas basados en ciencia y resultados.

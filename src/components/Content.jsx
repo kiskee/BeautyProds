@@ -98,7 +98,8 @@ export default function Content({ id }) {
                 ref={buttonRef}
                 className="px-8 py-4 bg-pink-600 text-white text-lg rounded-full hover:bg-pink-700 transition shadow-lg"
               >
-                COMPRALO AHORA
+                <a href="https://pay.hotmart.com/W99056782N?bid=1743999619668">¡COMPRALO AHORA!</a>
+                
               </button>
             </div>
           </div>

@@ -2,15 +2,6 @@ import React, { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-import {
-  AlertDialog,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogFooter,
-  AlertDialogTrigger,
-} from "@/components/ui/alert-dialog";
-import ContactForm from "./ContactForm";
-
 gsap.registerPlugin(ScrollToPlugin);
 
 const scrollToSection = (id) => {
@@ -20,8 +11,7 @@ const scrollToSection = (id) => {
 export default function Header() {
   const headerRef = useRef(null);
   const [key, setKey] = useState(0);
-  const text = "Zero-Celu";
-  const [open, setOpen] = useState(false);
+  const text = "Zero-Celulitis";
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -64,8 +54,8 @@ export default function Header() {
               .
             </motion.span>
           </motion.h1>
-          <nav className="hidden md:flex space-x-6">
-          <button
+          <nav className="hidden md:flex space-x-6 text-xl">
+            <button
               onClick={() => scrollToSection("hero")}
               className="text-gray-900 hover:text-pink-500 transition"
             >
@@ -96,24 +86,6 @@ export default function Header() {
               Testimonios
             </button>
           </nav>
-          {/* <button className="px-4 py-2 bg-pink-500 text-white rounded-full hover:bg-pink-600 transition">
-            Contacto
-          </button> */}
-          <AlertDialog open={open} onOpenChange={setOpen}>
-            <AlertDialogTrigger asChild>
-              <button className="px-4 py-2 bg-pink-500 text-white rounded-full hover:bg-pink-600 transition">
-                Contacto
-              </button>
-            </AlertDialogTrigger>
-            <AlertDialogContent>
-              <ContactForm />
-              <AlertDialogFooter>
-                <AlertDialogCancel onClick={() => setOpen(false)}>
-                  Cerrar
-                </AlertDialogCancel>
-              </AlertDialogFooter>
-            </AlertDialogContent>
-          </AlertDialog>
         </div>
       </header>
     </>
