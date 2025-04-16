@@ -135,6 +135,18 @@ export default function Hero({ id }) {
     });
   };
 
+  const handlePurchaseClick = () => {
+    // Ahora podemos usar directamente fbq que está disponible globalmente
+    if (window.fbq) {
+      window.fbq('track', 'Purchase', {
+        value: 10.00,
+        currency: 'USD',
+        content_ids: ['12345'],
+        content_type: 'product'
+      });
+    }
+  };
+
   return (
     <>
       {/* Hero Section */}
@@ -182,6 +194,7 @@ export default function Hero({ id }) {
             className="px-8 py-4 bg-pink-600 text-white text-lg rounded-full hover:bg-pink-700 transition shadow-lg relative"
             onMouseEnter={onButtonHover}
             onMouseLeave={onButtonLeave}
+            onClick={handlePurchaseClick}
           >
             <a href="https://pay.hotmart.com/W99056782N?bid=1743999619668">¡COMPRA TU GUÍA AHORA!</a>
             
