@@ -139,7 +139,7 @@ export default function Hero({ id }) {
     // Ahora podemos usar directamente fbq que está disponible globalmente
     if (window.fbq) {
       window.fbq('track', 'Purchase', {
-        value: 10.00,
+        value: 8.00,
         currency: 'USD',
         content_ids: ['12345'],
         content_type: 'product'

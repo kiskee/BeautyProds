@@ -64,6 +64,18 @@ export default function Content({ id }) {
     );
   }, []);
 
+  const handlePurchaseClick = () => {
+    // Ahora podemos usar directamente fbq que está disponible globalmente
+    if (window.fbq) {
+      window.fbq('track', 'Purchase', {
+        value: 8.00,
+        currency: 'USD',
+        content_ids: ['12345'],
+        content_type: 'product'
+      });
+    }
+  };
+
   return (
     <section ref={sectionRef} id={id} className="py-20 px-4">
       <div className="container mx-auto">
@@ -97,9 +109,10 @@ export default function Content({ id }) {
               <button
                 ref={buttonRef}
                 className="px-8 py-4 bg-pink-600 text-white text-lg rounded-full hover:bg-pink-700 transition shadow-lg"
+                onClick={handlePurchaseClick}
               >
                 <a href="https://pay.hotmart.com/W99056782N?bid=1743999619668">¡COMPRALO AHORA!</a>
-                
+
               </button>
             </div>
           </div>
