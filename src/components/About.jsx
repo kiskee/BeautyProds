@@ -17,22 +17,21 @@ export default function About({ id }) {
   const listItemRefs = useRef([]);
 
   useEffect(() => {
-    // Registrar plugins
     gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-    
+
     // Configuración del contexto para mejor rendimiento
     const ctx = gsap.context(() => {
       // Crear animación para el título principal cuando aparece en viewport
       gsap.fromTo(
         titleRef.current,
-        { 
-          y: 30, 
-          opacity: 0 
+        {
+          y: 30,
+          opacity: 0
         },
-        { 
-          y: 0, 
-          opacity: 1, 
-          duration: 0.8, 
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.8,
           ease: "power2.out",
           scrollTrigger: {
             trigger: titleRef.current,
@@ -45,14 +44,14 @@ export default function About({ id }) {
       // Animación de revelación para el contenedor de imagen
       gsap.fromTo(
         imageContainerRef.current,
-        { 
-          x: -80, 
-          opacity: 0 
+        {
+          x: -80,
+          opacity: 0
         },
-        { 
-          x: 0, 
-          opacity: 1, 
-          duration: 1.2, 
+        {
+          x: 0,
+          opacity: 1,
+          duration: 1.2,
           ease: "power3.out",
           scrollTrigger: {
             trigger: imageContainerRef.current,
@@ -65,14 +64,14 @@ export default function About({ id }) {
       // Animación para la imagen misma
       gsap.fromTo(
         imageRef.current,
-        { 
-          scale: 0.9, 
+        {
+          scale: 0.9,
           filter: "blur(5px)"
         },
-        { 
-          scale: 1, 
-          filter: "blur(0px)", 
-          duration: 1.5, 
+        {
+          scale: 1,
+          filter: "blur(0px)",
+          duration: 1.5,
           ease: "power2.out",
           scrollTrigger: {
             trigger: imageRef.current,
@@ -90,18 +89,18 @@ export default function About({ id }) {
         yoyo: true,
         ease: "sine.inOut"
       });
-      
+
       // Animación para el contenido de texto
       gsap.fromTo(
         contentRef.current,
-        { 
-          x: 80, 
-          opacity: 0 
+        {
+          x: 80,
+          opacity: 0
         },
-        { 
-          x: 0, 
-          opacity: 1, 
-          duration: 1.2, 
+        {
+          x: 0,
+          opacity: 1,
+          duration: 1.2,
           ease: "power3.out",
           scrollTrigger: {
             trigger: contentRef.current,
@@ -117,18 +116,18 @@ export default function About({ id }) {
         paragraph1Ref.current,
         paragraph2Ref.current
       ];
-      
+
       contentElements.forEach((element, index) => {
         gsap.fromTo(
           element,
-          { 
-            y: 30, 
-            opacity: 0 
+          {
+            y: 30,
+            opacity: 0
           },
-          { 
-            y: 0, 
-            opacity: 1, 
-            duration: 0.7, 
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.7,
             delay: 0.3 + (index * 0.15),
             ease: "power2.out",
             scrollTrigger: {
@@ -144,14 +143,14 @@ export default function About({ id }) {
       listItemRefs.current.forEach((item, index) => {
         gsap.fromTo(
           item,
-          { 
-            x: -20, 
-            opacity: 0 
+          {
+            x: -20,
+            opacity: 0
           },
-          { 
-            x: 0, 
-            opacity: 1, 
-            duration: 0.5, 
+          {
+            x: 0,
+            opacity: 1,
+            duration: 0.5,
             delay: 0.7 + (index * 0.12),
             ease: "back.out(1.2)",
             scrollTrigger: {
@@ -161,18 +160,18 @@ export default function About({ id }) {
             }
           }
         );
-        
+
         // Animación para los íconos dentro de los items
         gsap.fromTo(
           item.querySelector("div"),
-          { 
-            scale: 0, 
-            rotation: -30 
+          {
+            scale: 0,
+            rotation: -30
           },
-          { 
-            scale: 1, 
-            rotation: 0, 
-            duration: 0.6, 
+          {
+            scale: 1,
+            rotation: 0,
+            duration: 0.6,
             delay: 0.8 + (index * 0.12),
             ease: "elastic.out(1, 0.5)",
             scrollTrigger: {
@@ -199,7 +198,7 @@ export default function About({ id }) {
           });
         }
       });
-      
+
       // Animación en hover para los items de la lista
       listItemRefs.current.forEach((item) => {
         item.addEventListener("mouseenter", () => {
@@ -214,7 +213,7 @@ export default function About({ id }) {
             duration: 0.3
           });
         });
-        
+
         item.addEventListener("mouseleave", () => {
           gsap.to(item, {
             x: 0,
@@ -248,8 +247,8 @@ export default function About({ id }) {
       {/* About Section */}
       <section ref={sectionRef} className="py-20 px-4 overflow-hidden" id={id}>
         <div className="container mx-auto">
-          <h2 
-            ref={titleRef} 
+          <h2
+            ref={titleRef}
             className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12 relative"
           >
             <span className="relative inline-block">
@@ -272,8 +271,8 @@ export default function About({ id }) {
             </span>
           </h2>
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div 
-              ref={imageContainerRef} 
+            <div
+              ref={imageContainerRef}
               className="lg:pl-24 relative"
             >
               <div className="absolute -top-8 -left-8 w-24 h-24 rounded-full bg-pink-100 opacity-60"></div>
@@ -286,13 +285,13 @@ export default function About({ id }) {
               />
             </div>
             <div ref={contentRef}>
-              <h3 
+              <h3
                 ref={subtitleRef}
                 className="text-2xl font-semibold text-gray-900 mb-4"
               >
                 Comprende tu cuerpo
               </h3>
-              <p 
+              <p
                 ref={paragraph1Ref}
                 className="text-gray-900 mb-4"
               >
@@ -301,15 +300,15 @@ export default function About({ id }) {
                 es solo un problema estético, sino una condición natural del
                 tejido graso subcutáneo.
               </p>
-              <p 
+              <p
                 ref={paragraph2Ref}
                 className="text-gray-900 mb-4"
               >
                 En nuestra guía completa encontrarás información sobre:
               </p>
               <ul className="space-y-2 mb-6">
-                <li 
-                  ref={addToListRefs} 
+                <li
+                  ref={addToListRefs}
                   className="flex items-center cursor-pointer"
                 >
                   <div className="bg-pink-100 p-2 rounded-full mr-3">
@@ -329,8 +328,8 @@ export default function About({ id }) {
                     Tipos de celulitis: blanda, dura y edematosa
                   </span>
                 </li>
-                <li 
-                  ref={addToListRefs} 
+                <li
+                  ref={addToListRefs}
                   className="flex items-center cursor-pointer"
                 >
                   <div className="bg-pink-100 p-2 rounded-full mr-3">
@@ -350,8 +349,8 @@ export default function About({ id }) {
                     Factores que contribuyen a su aparición
                   </span>
                 </li>
-                <li 
-                  ref={addToListRefs} 
+                <li
+                  ref={addToListRefs}
                   className="flex items-center cursor-pointer"
                 >
                   <div className="bg-pink-100 p-2 rounded-full mr-3">
